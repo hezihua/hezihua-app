@@ -1,5 +1,5 @@
 'use client'
-import { Player } from '@lottiefiles/react-lottie-player';
+import Player from '@/components/LottiePlayer'
 
 export default function Loading() {
     return (

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { useSupabase } from '@/context/supabase-context'
 import { useSearchParams } from 'next/navigation'
 import { useCommonContext } from '@/context/common-context'
-import { Player } from '@lottiefiles/react-lottie-player';
+import Player from '@/components/LottiePlayer'
 import { getStripe } from '@/libs/stripe-client'
 import ErrorModal from '@/components/ErrorModal'
 import { postData } from '@/libs/helpers'
