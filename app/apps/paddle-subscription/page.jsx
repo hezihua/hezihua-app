@@ -24,7 +24,6 @@ const page = () => {
       .select("*")
       .match({ user_id: userData?.id }).single()
       .throwOnError();
-    debugger
     console.log('payment: ', payment)
     return payment
   }
@@ -86,7 +85,6 @@ const page = () => {
   useEffect(() => {
     (async () => {
       const payData = await getUserPayData({ supabase: supabase })
-      debugger
 
       if (payData?.subscription_id) {
         const result = tiers.filter((item) => item?.pricePaddle?.monthly?.plan_id == parseInt(payData?.subscription_plan_id) || item?.pricePaddle?.annually?.plan_id == parseInt(payData?.subscription_plan_id))
